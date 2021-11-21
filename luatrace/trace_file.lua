@@ -36,7 +36,7 @@ local limit                             -- How many traces we'll hold before we 
 local function write_trace(a, b, c, d)
     local line = ""
     if type(a) == "number" then
-        line = tonumber(a) .. " " .. ("%g"):format(tonumber(b)) .. "\n"
+        line = tonumber(a) .. "\n"
     elseif a:match("[>ST]") then
         line = a .. " " .. tostring(b) .. " " .. tostring(c) .. " " .. tostring(d) .. "\n"
     elseif a == "R" then
